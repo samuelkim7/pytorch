@@ -469,8 +469,6 @@ def fractional_max_pool2d_with_indices(
             return_indices=return_indices,
             _random_samples=_random_samples,
         )
-    if output_size is None and output_ratio is None:
-        raise ValueError("fractional_max_pool2d requires specifying either " "an output_size or an output_ratio")
     if output_size is None:
         assert output_ratio is not None
         _output_ratio = _pair(output_ratio)
